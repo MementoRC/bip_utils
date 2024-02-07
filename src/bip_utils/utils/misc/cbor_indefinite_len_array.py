@@ -32,7 +32,7 @@ from typing import Dict, List, Sequence
 
 import cbor2
 
-from bip_utils.utils.misc.integer import IntegerUtils
+from .integer import IntegerUtils
 
 
 @unique
