@@ -38,7 +38,7 @@ from bip_utils import (
     Sr25519PrivateKey, Sr25519PublicKey
 )
 from bip_utils.ecc.conf import EccConf
-from src.bip_utils.utils.misc import IntegerUtils
+from bip_utils.utils.misc import IntegerUtils
 
 
 # ed25519 order and generator
