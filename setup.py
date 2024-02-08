@@ -40,7 +40,7 @@ def load_requirements(req_file):
 
 # Command base class
 class CommandBase(object):
-    conf_file = "bip_utils/ecc/conf.py"
+    conf_file = "src/bip_utils/ecc/conf.py"
     conf_str = "USE_COINCURVE: bool = "
 
     user_options = [
@@ -99,7 +99,7 @@ class DevelopCommand(CommandBase, develop):
 
 
 # Load version
-version = load_version("bip_utils", "_version.py")
+version = load_version("src/bip_utils", "_version.py")
 
 # Setup configuration
 setuptools.setup(
@@ -127,7 +127,8 @@ setuptools.setup(
         ],
         "develop": load_requirements("requirements-dev.txt"),
     },
-    packages=setuptools.find_packages(exclude=["*tests*"]),
+    packages=setuptools.find_packages(where='src', exclude=["*tests*"]),
+    package_dir={"": "src"},
     package_data={
         "bip_utils": [
             # BIP39
