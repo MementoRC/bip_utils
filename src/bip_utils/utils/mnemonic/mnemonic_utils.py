@@ -88,6 +88,9 @@ class MnemonicUtils:
         # Get back the bytes chunk
         int_chunk = word1_idx + (n * ((word2_idx - word1_idx) % n)) + (n * n * ((word3_idx - word2_idx) % n))
 
+        if IntegerUtils.GetBytesNumber(int_chunk) > 3:
+            return IntegerUtils.ToBytes(int_chunk, endianness=endianness)
+        # The chunk shall be at least 4-byte long
         return IntegerUtils.ToBytes(int_chunk, bytes_num=4, endianness=endianness)
 
 

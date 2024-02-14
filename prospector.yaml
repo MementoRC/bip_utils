@@ -4,6 +4,7 @@ doc-warnings: true
 member-warnings: true
 
 ignore-paths:
+  - .eggs
   - .tox
   - benchmark
   - build
@@ -12,6 +13,7 @@ ignore-paths:
   - readme
   - tests
   - my_tests
+  - venv
 
 ignore-patterns:
   - setup.py
